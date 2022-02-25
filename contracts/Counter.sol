@@ -1,4 +1,4 @@
-pragma solidity ^0.6.8;
+pragma solidity ^0.8.1;
 import "hardhat/console.sol";
 
 contract Counter {

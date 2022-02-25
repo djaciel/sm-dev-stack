@@ -27,7 +27,7 @@ const config: HardhatUserConfig = {
     timeout: 30000,
   },
   solidity: {
-    version: '0.6.8',
+    version: '0.8.1',
     settings: {},
   },
   namedAccounts: {

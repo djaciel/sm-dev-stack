@@ -27,11 +27,6 @@ describe('Counter', () => {
     })
   })
   describe('count down', async () => {
-    // 5
-    it('should fail', async () => {
-      // this test will fail
-      await counter.countDown()
-    })
     it('should count down', async () => {
       await counter.countUp()
       await counter.countDown()
