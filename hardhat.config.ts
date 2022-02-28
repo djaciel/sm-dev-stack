@@ -5,6 +5,7 @@ import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
+import '@openzeppelin/hardhat-upgrades'
 
 import { HardhatUserConfig } from 'hardhat/types'
 
@@ -27,7 +28,7 @@ const config: HardhatUserConfig = {
     timeout: 30000,
   },
   solidity: {
-    version: '0.8.1',
+    version: '0.8.4',
     settings: {},
   },
   namedAccounts: {
