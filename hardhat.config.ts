@@ -6,10 +6,9 @@ import 'hardhat-deploy-ethers'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
 
-import { HardhatUserConfig } from 'hardhat/types'
+import networks from './hardhat.network';
 
-const infuraApiKey = process.env.INFURA_API_KEY
-const mnemonic = process.env.HDWALLET_MNEMONIC
+import { HardhatUserConfig } from 'hardhat/types';
 
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
@@ -35,14 +34,7 @@ const config: HardhatUserConfig = {
       default: 0,
     },
   },
-  networks: {
-    rinkeby: {
-      url: `https://rinkeby.infura.io/v3/${infuraApiKey}`,
-      accounts: {
-        mnemonic,
-      },
-    },
-  },
+  networks,
   typechain: {
     outDir: 'types',
     target: 'ethers-v5',
