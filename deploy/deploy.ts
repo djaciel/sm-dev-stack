@@ -16,14 +16,34 @@ const deployFunction: DeployFunction = async function (hre: HardhatRuntimeEnviro
   console.log(`network: ${chainId}`)
   console.log(`deployer: ${deployer}`)
 
-  console.log(`\nDeploying Counter...`)
+  console.log(`\nDeploying JUSDT...`)
 
-  const counterResult: DeployResult = await deploy('Counter', {
+  const jUSDT: DeployResult = await deploy('JUSDT', {
     from: deployer,
     skipIfAlreadyDeployed: true,
   })
 
-  console.log(`Counter deployed at ${counterResult.address}`)
+  console.log(`JUSDT deployed at ${jUSDT.address}`)
+
+
+  console.log(`\nDeploying JDAI...`)
+
+  const jDAI: DeployResult = await deploy('JDAI', {
+    from: deployer,
+    skipIfAlreadyDeployed: true,
+  })
+
+  console.log(`JDAI deployed at ${jDAI.address}`)
+
+
+  console.log(`\nDeploying JWBTC...`)
+
+  const jWBTC: DeployResult = await deploy('JWBTC', {
+    from: deployer,
+    skipIfAlreadyDeployed: true,
+  })
+
+  console.log(`JWBTC deployed at ${jWBTC.address}`)
 }
 
 export default deployFunction
